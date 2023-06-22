@@ -63,6 +63,10 @@ jobs:
           sudo cat /etc/resolv.conf
           echo
           sudo dig www.google.com
+          echo /etc/chrony/chrony.conf
+          sudo cat /etc/chrony/chrony.conf
+          echo /etc/chrony.conf
+          sudo cat /etc/chrony.conf
           echo
           
           
