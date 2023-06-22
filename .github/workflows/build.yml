@@ -1,0 +1,17 @@
+name: CI
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Preinstall
+        run: sudo apt update -y -qqq ; \
+          sudo apt install -y bash wget ca-certificates curl git ; \
+          sudo ln -svf bash /bin/sh ; \
+          sudo bash .pre ; \
+          sudo apt upgrade -fy -qqq
+      - name: Install docker
+        run: |
+          bash install_docker.sh
