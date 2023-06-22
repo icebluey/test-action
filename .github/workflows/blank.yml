@@ -59,4 +59,10 @@ jobs:
           echo
           sudo systemctl status -l docker
           echo
+          sudo chronyc sources -v
+          sudo cat /etc/resolv.conf
+          echo
+          sudo dig www.google.com
+          echo
+          
           
