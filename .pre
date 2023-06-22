@@ -59,6 +59,7 @@ apt install -y chrony
 systemctl stop chrony.service
 sed -e "/^pool/d" -i /etc/chrony/chrony.conf
 sed -e "/^server/d" -i /etc/chrony/chrony.conf
+sed -e "s|^refclock|#refclock|g" -i /etc/chrony/chrony.conf
 sed -e "1iserver time1.google.com iburst minpoll 4 maxpoll 5\nserver time2.google.com iburst minpoll 4 maxpoll 5\nserver time3.google.com iburst minpoll 4 maxpoll 5\nserver time4.google.com iburst minpoll 4 maxpoll 5" -i /etc/chrony/chrony.conf
 systemctl enable chrony.service
 systemctl start chrony.service
