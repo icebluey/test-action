@@ -28,13 +28,15 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          apt update -y
-          apt install -fy
-          apt install -y binutils coreutils util-linux
+          sudo apt update -y
+          sudo apt install -fy
+          sudo apt install -y binutils coreutils util-linux
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+          sudo who am i
+          echo
           sudo uname -a
           echo
           cat /etc/os-release
