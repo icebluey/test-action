@@ -62,3 +62,8 @@ sed -e "/^pool/d" -i /etc/chrony/chrony.conf
 systemctl enable chrony.service
 systemctl start chrony.service
 chronyc makestep
+apt install -y binutils coreutils util-linux findutils diffutils patch sed gawk grep file tar gzip bzip2 xz-utils
+apt install -y socat ethtool ipvsadm ipset psmisc bash-completion conntrack iproute2 nfs-common
+apt install -y iptables
+apt install -y ebtables
+apt install -y nftables
