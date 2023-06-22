@@ -15,4 +15,4 @@ jobs:
           sudo apt upgrade -fy -qqq
       - name: Install docker
         run: |
-          bash install_docker.sh
+          sudo bash install_docker.sh
