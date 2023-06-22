@@ -28,14 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          snap list
-          sudo snap list
-          sudo snap remove firefox
-          sudo snap remove snap-store
-          sudo snap remove gtk-common-themes
-          sudo snap remove gnome-3-38-2004
-          sudo snap remove core18
-          sudo snap remove snapd-desktop-integration
+          sudo snap remove --purge -y firefox
+          sudo snap remove --purge -y snap-store
+          sudo snap remove --purge -y core
+          sudo snap remove --purge -y core18
+          sudo snap remove --purge -y core20
+          sudo snap remove --purge -y lxd
+          sudo snap remove --purge -y snapd-desktop-integration
           sudo rm -rf /var/cache/snapd
           rm -rf ~/snap
           sudo rm -rf ~/snap
@@ -65,6 +64,7 @@ jobs:
           sudo apt autoremove --purge -y moby-containerd
           sudo apt autoremove --purge -y moby-runc
           sudo apt autoremove --purge -y podman
+          sudo apt autoremove --purge -y crun
           sudo apt update -y
           sudo apt upgrade -fy
           sudo apt install -y binutils coreutils util-linux
