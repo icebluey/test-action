@@ -49,5 +49,5 @@ jobs:
           echo
           sudo lsblk
           echo
-          dpkg -l | grep -iE 'docker|moby|container'
+          dpkg -l | grep -iE 'docker|moby|container|firefox|snap'
           echo
