@@ -28,6 +28,41 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          sudo snap remove firefox
+          sudo snap remove snap-store
+          sudo snap remove gtk-common-themes
+          sudo snap remove gnome-3-38-2004
+          sudo snap remove core18
+          sudo snap remove snapd-desktop-integration
+          sudo rm -rf /var/cache/snapd
+          rm -rf ~/snap
+          sudo rm -rf ~/snap
+          sudo rm -fr /etc/apt/preferences.d/firefox*
+          sudo systemctl stop docker.socket
+          sudo systemctl stop podman.socket
+          sudo systemctl stop docker.service
+          sudo systemctl stop containerd.service
+          sudo systemctl stop podman.service
+          sudo systemctl disable docker.socket
+          sudo systemctl disable podman.socket
+          sudo systemctl disable docker.service
+          sudo systemctl disable containerd.service
+          sudo systemctl disable podman.service
+          sudo systemctl stop snapd.service
+          sudo systemctl stop snapd.socket
+          sudo systemctl stop snapd.seeded.service
+          sudo systemctl disable snapd.service
+          sudo systemctl disable snapd.socket
+          sudo systemctl disable snapd.seeded.service
+          sudo apt autoremove --purge -y snapd
+          sudo apt autoremove --purge -y firefox
+          sudo apt autoremove --purge -y moby-engine
+          sudo apt autoremove --purge -y moby-cli
+          sudo apt autoremove --purge -y moby-buildx
+          sudo apt autoremove --purge -y moby-compose
+          sudo apt autoremove --purge -y moby-containerd
+          sudo apt autoremove --purge -y moby-runc
+          sudo apt autoremove --purge -y podman
           sudo apt update -y
           sudo apt upgrade -fy
           sudo apt install -y binutils coreutils util-linux
