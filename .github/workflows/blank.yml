@@ -51,3 +51,6 @@ jobs:
           echo
           dpkg -l | grep -iE 'docker|moby|container|firefox|snap'
           echo
+          sudo systemctl list-unit-files | grep -iE 'snap|docker|podman|container|moby'
+          echo
+          
