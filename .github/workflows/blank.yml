@@ -28,6 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          snap list
+          sudo snap list
           sudo snap remove firefox
           sudo snap remove snap-store
           sudo snap remove gtk-common-themes
