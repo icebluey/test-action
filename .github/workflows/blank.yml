@@ -90,4 +90,8 @@ jobs:
           echo
           sudo systemctl list-unit-files | grep -iE 'snap|docker|podman|container|moby'
           echo
+          sudo bash install_docker.sh
+          echo
+          sudo systemctl status -l docker
+          echo
           
