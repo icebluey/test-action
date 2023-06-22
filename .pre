@@ -5,13 +5,13 @@ umask 022
 ln -svf ../usr/share/zoneinfo/UTC /etc/localtime
 DEBIAN_FRONTEND=noninteractive sudo apt-get install -y tzdata
 dpkg-reconfigure --frontend noninteractive tzdata
-snap remove --purge -y firefox
-snap remove --purge -y snap-store
-snap remove --purge -y core
-snap remove --purge -y core18
-snap remove --purge -y core20
-snap remove --purge -y lxd
-snap remove --purge -y snapd-desktop-integration
+snap remove --purge lxd
+snap remove --purge firefox
+snap remove --purge snap-store
+snap remove --purge core
+snap remove --purge core18
+snap remove --purge core20
+snap remove --purge snapd-desktop-integration
 systemctl stop docker.socket
 systemctl stop podman.socket
 systemctl stop docker.service
