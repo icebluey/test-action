@@ -28,12 +28,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          sudo snap remove --purge lxd
           sudo snap remove --purge firefox
           sudo snap remove --purge snap-store
           sudo snap remove --purge core
           sudo snap remove --purge core18
           sudo snap remove --purge core20
-          sudo snap remove --purge lxd
           sudo snap remove --purge snapd-desktop-integration
           sudo rm -rf /var/cache/snapd
           rm -rf ~/snap
