@@ -15,13 +15,13 @@ jobs:
           sudo apt upgrade -fy -qqq
       - name: create
         run: |
-          mkdir /home/.tmp
-          touch /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz
-          touch /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz.sha256
-          touch /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz
-          touch /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz.sha256
-          touch /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz
-          touch /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz.sha256
+          sudo mkdir /home/.tmp
+          sudo touch /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz
+          sudo touch /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz.sha256
+          sudo touch /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz
+          sudo touch /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz.sha256
+          sudo touch /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz
+          sudo touch /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz.sha256
       - name: upload-artifact
         uses: actions/upload-artifact@v3
         with:
