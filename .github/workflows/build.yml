@@ -13,6 +13,18 @@ jobs:
           sudo ln -svf bash /bin/sh ; 
           sudo bash .pre ; 
           sudo apt upgrade -fy -qqq
-      - name: Install docker
+      - name: create
         run: |
-          sudo bash install_docker.sh
+          mkdir /home/.tmp
+          touch /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz
+          touch /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz.sha256
+          touch /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz
+          touch /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz.sha256
+          touch /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz
+          touch /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz.sha256
+      - name: upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Artifacts-V3
+          path: /home/.tmp/*
+
