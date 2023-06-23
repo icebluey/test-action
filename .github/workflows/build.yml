@@ -16,15 +16,15 @@ jobs:
       - name: create
         run: |
           sudo mkdir /home/.tmp
-          sudo touch /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz
-          sudo touch /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz.sha256
-          sudo touch /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz
-          sudo touch /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz.sha256
-          sudo touch /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz
-          sudo touch /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz.sha256
-      - name: upload-artifact
-        uses: actions/upload-artifact@v3
+          sudo echo 123 > /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz
+          sudo echo 123 > /home/.tmp/haproxy-2.8.0-1.el7.x86_64.tar.xz.sha256
+          sudo echo 123 > /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz
+          sudo echo 123 > /home/.tmp/haproxy-2.8.0-1.el8.x86_64.tar.xz.sha256
+          sudo echo 123 > /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz
+          sudo echo 123 > /home/.tmp/haproxy-2.8.0-1_amd64.tar.xz.sha256
+      - name: release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          name: Artifacts-V3
-          path: /home/.tmp/*
+          files: /home/.tmp/*
 
