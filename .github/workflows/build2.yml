@@ -1,0 +1,27 @@
+name: ip2
+on:
+  #push:
+  #  branches: [ "master" ]
+  #pull_request:
+  #  branches: [ "master" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Preinstall
+        run: >
+          sudo apt update -y -qqq ; 
+          sudo apt install -y bash wget ca-certificates curl git iproute2 net-tools ;
+          sudo ln -svf bash /bin/sh ; 
+      - name: create
+        run: |
+          echo
+          ip addr
+          echo
+          ifconfig
+          echo
+          sleep 100
+
+
