@@ -13,65 +13,63 @@ jobs:
       - name: Preinstall
         run: |
           sudo apt update -y -qqq
-          sudo apt install -y bash wget ca-certificates curl git iproute2 net-tools
-          sudo ln -svf bash /bin/sh
-          sudo apt autoremove --purge -y dotnet-apphost-pack-6.0
-          sudo apt autoremove --purge -y dotnet-apphost-pack-7.0
-          sudo apt autoremove --purge -y dotnet-host
-          sudo apt autoremove --purge -y dotnet-hostfxr-6.0
-          sudo apt autoremove --purge -y dotnet-hostfxr-7.0
-          sudo apt autoremove --purge -y dotnet-runtime-6.0
-          sudo apt autoremove --purge -y dotnet-runtime-7.0
-          sudo apt autoremove --purge -y dotnet-runtime-deps-6.0
-          sudo apt autoremove --purge -y dotnet-runtime-deps-7.0
-          sudo apt autoremove --purge -y dotnet-sdk-6.0
-          sudo apt autoremove --purge -y dotnet-sdk-7.0
-          sudo apt autoremove --purge -y dotnet-targeting-pack-6.0
-          sudo apt autoremove --purge -y dotnet-targeting-pack-7.0
-          sudo apt autoremove --purge -y google-chrome-stable
-          sudo apt autoremove --purge -y google-cloud-sdk
-          sudo apt autoremove --purge -y libmono-microsoft-build4.0-cil
-          sudo apt autoremove --purge -y libmono-microsoft-build-engine4.0-cil
-          sudo apt autoremove --purge -y libmono-microsoft-build-framework4.0-cil
-          sudo apt autoremove --purge -y libmono-microsoft-build-tasks-v4.0-4.0-cil
-          sudo apt autoremove --purge -y libmono-microsoft-build-utilities-v4.0-4.0-cil
-          sudo apt autoremove --purge -y libmono-microsoft-csharp4.0-cil
-          sudo apt autoremove --purge -y libmono-microsoft-visualc10.0-cil
-          sudo apt autoremove --purge -y libmono-microsoft-web-infrastructure1.0-cil
-          sudo apt autoremove --purge -y libmono-sqlite4.0-cil
-          sudo apt autoremove --purge -y libmono-system-json-microsoft4.0-cil
-          sudo apt autoremove --purge -y libmspack0
-          sudo apt autoremove --purge -y libpq5
-          sudo apt autoremove --purge -y libpq-dev
-          sudo apt autoremove --purge -y libsybdb5
-          sudo apt autoremove --purge -y libz3-4
-          sudo apt autoremove --purge -y libz3-dev
-          sudo apt autoremove --purge -y microsoft-edge-stable
-          sudo apt autoremove --purge -y mono-roslyn
-          sudo apt autoremove --purge -y msodbcsql17
-          sudo apt autoremove --purge -y mssql-tools
-          sudo apt autoremove --purge -y mysql-client
-          sudo apt autoremove --purge -y mysql-client-8.0
-          sudo apt autoremove --purge -y mysql-client-core-8.0
-          sudo apt autoremove --purge -y mysql-common
-          sudo apt autoremove --purge -y mysql-server
-          sudo apt autoremove --purge -y mysql-server-8.0
-          sudo apt autoremove --purge -y mysql-server-core-8.0
-          sudo apt autoremove --purge -y nginx
-          sudo apt autoremove --purge -y nginx-common
-          sudo apt autoremove --purge -y packages-microsoft-prod
-          sudo apt autoremove --purge -y php8.1-mysql
-          sudo apt autoremove --purge -y php8.1-pgsql
-          sudo apt autoremove --purge -y php8.1-sqlite3
-          sudo apt autoremove --purge -y postgresql-14
-          sudo apt autoremove --purge -y postgresql-client-14
-          sudo apt autoremove --purge -y postgresql-client-common
-          sudo apt autoremove --purge -y postgresql-common
-          sudo apt autoremove --purge -y powermgmt-base
-          sudo apt autoremove --purge -y powershell
-          sudo apt autoremove --purge -y python3-configobj
-          sudo apt autoremove --purge -y shim-signed
-          sudo apt autoremove --purge -y firefox
+          sudo apt autoremove --purge -y dotnet-apphost-pack-6.0 || true 
+          sudo apt autoremove --purge -y dotnet-apphost-pack-7.0 || true 
+          sudo apt autoremove --purge -y dotnet-host || true 
+          sudo apt autoremove --purge -y dotnet-hostfxr-6.0 || true 
+          sudo apt autoremove --purge -y dotnet-hostfxr-7.0 || true 
+          sudo apt autoremove --purge -y dotnet-runtime-6.0 || true 
+          sudo apt autoremove --purge -y dotnet-runtime-7.0 || true 
+          sudo apt autoremove --purge -y dotnet-runtime-deps-6.0 || true 
+          sudo apt autoremove --purge -y dotnet-runtime-deps-7.0 || true 
+          sudo apt autoremove --purge -y dotnet-sdk-6.0 || true 
+          sudo apt autoremove --purge -y dotnet-sdk-7.0 || true 
+          sudo apt autoremove --purge -y dotnet-targeting-pack-6.0 || true 
+          sudo apt autoremove --purge -y dotnet-targeting-pack-7.0 || true 
+          sudo apt autoremove --purge -y google-chrome-stable || true 
+          sudo apt autoremove --purge -y google-cloud-sdk || true 
+          sudo apt autoremove --purge -y libmono-microsoft-build4.0-cil || true 
+          sudo apt autoremove --purge -y libmono-microsoft-build-engine4.0-cil || true 
+          sudo apt autoremove --purge -y libmono-microsoft-build-framework4.0-cil || true 
+          sudo apt autoremove --purge -y libmono-microsoft-build-tasks-v4.0-4.0-cil || true 
+          sudo apt autoremove --purge -y libmono-microsoft-build-utilities-v4.0-4.0-cil || true 
+          sudo apt autoremove --purge -y libmono-microsoft-csharp4.0-cil || true 
+          sudo apt autoremove --purge -y libmono-microsoft-visualc10.0-cil || true 
+          sudo apt autoremove --purge -y libmono-microsoft-web-infrastructure1.0-cil || true 
+          sudo apt autoremove --purge -y libmono-sqlite4.0-cil || true 
+          sudo apt autoremove --purge -y libmono-system-json-microsoft4.0-cil || true 
+          sudo apt autoremove --purge -y libmspack0 || true 
+          sudo apt autoremove --purge -y libpq5 || true 
+          sudo apt autoremove --purge -y libpq-dev || true 
+          sudo apt autoremove --purge -y libsybdb5 || true 
+          sudo apt autoremove --purge -y libz3-4 || true 
+          sudo apt autoremove --purge -y libz3-dev || true 
+          sudo apt autoremove --purge -y microsoft-edge-stable || true 
+          sudo apt autoremove --purge -y mono-roslyn || true 
+          sudo apt autoremove --purge -y msodbcsql17 || true 
+          sudo apt autoremove --purge -y mssql-tools || true 
+          sudo apt autoremove --purge -y mysql-client || true 
+          sudo apt autoremove --purge -y mysql-client-8.0 || true 
+          sudo apt autoremove --purge -y mysql-client-core-8.0 || true 
+          sudo apt autoremove --purge -y mysql-common || true 
+          sudo apt autoremove --purge -y mysql-server || true 
+          sudo apt autoremove --purge -y mysql-server-8.0 || true 
+          sudo apt autoremove --purge -y mysql-server-core-8.0 || true 
+          sudo apt autoremove --purge -y nginx || true 
+          sudo apt autoremove --purge -y nginx-common || true 
+          sudo apt autoremove --purge -y packages-microsoft-prod || true 
+          sudo apt autoremove --purge -y php8.1-mysql || true 
+          sudo apt autoremove --purge -y php8.1-pgsql || true 
+          sudo apt autoremove --purge -y php8.1-sqlite3 || true 
+          sudo apt autoremove --purge -y postgresql-14 || true 
+          sudo apt autoremove --purge -y postgresql-client-14 || true 
+          sudo apt autoremove --purge -y postgresql-client-common || true 
+          sudo apt autoremove --purge -y postgresql-common || true 
+          sudo apt autoremove --purge -y powermgmt-base || true 
+          sudo apt autoremove --purge -y powershell || true 
+          sudo apt autoremove --purge -y python3-configobj || true 
+          sudo apt autoremove --purge -y shim-signed || true 
+          sudo apt autoremove --purge -y firefox || true 
           sudo /bin/rm -fr /usr/share/sbt
           sudo /bin/rm -fr /usr/share/gradle*
           sudo /bin/rm -fr /usr/share/miniconda*
@@ -97,6 +95,8 @@ jobs:
           sudo /bin/rm -fr /usr/local/share
           sudo /bin/rm -fr /usr/local/.ghcup
           sudo /bin/rm -fr /opt/hostedtoolcache
+          sudo apt install -y bash wget ca-certificates curl git iproute2 net-tools
+          sudo ln -svf bash /bin/sh
 
       - name: create
         run: |
