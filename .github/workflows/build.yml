@@ -26,4 +26,6 @@ jobs:
           echo
           sudo lsblk
           echo
+          sudo ls -la /
+          echo
 
