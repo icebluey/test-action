@@ -22,5 +22,8 @@ jobs:
           echo
           ifconfig
           echo
-          sleep 600
+          sudo df -h
+          echo
+          sudo lsblk
+          echo
 
