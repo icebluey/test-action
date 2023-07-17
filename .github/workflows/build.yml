@@ -28,19 +28,19 @@ jobs:
           echo
           sudo ls -la /
           echo
-          sudo du -d 1 -h / | sort -h
-          echo
           sudo du -d 1 -h /usr/ | sort -h
           echo
           sudo du -d 1 -h /usr/share/ | sort -h
           echo
           sudo du -d 1 -h /opt/ | sort -h
           echo
-          sudo du -d 1 -h /usr/local/ | sort -h
+          sudo du -d 1 -h /usr/local/lib/ | sort -h
           echo
           sudo du -d 1 -h /usr/lib/ | sort -h
           echo
           sudo dpkg -l | grep -iE 'dotnet|swift|conda|gradle|sbt'
+          echo
+          sudo dpkg -l | grep -iE 'sql|postgre|google|aws|microsoft|power'
           echo
 
 
