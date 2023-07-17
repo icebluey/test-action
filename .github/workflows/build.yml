@@ -1,9 +1,9 @@
 name: ip1
 on:
-  #push:
-  #  branches: [ "master" ]
-  #pull_request:
-  #  branches: [ "master" ]
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
   workflow_dispatch:
 jobs:
   build:
@@ -27,5 +27,11 @@ jobs:
           sudo lsblk
           echo
           sudo ls -la /
+          echo
+          sudo du -d 1 -h / | sort -h
+          echo
+          sudo du -d 1 -h /usr/ | sort -h
+          echo
+          sudo du -d 1 -h /usr/share/ | sort -h
           echo
 
